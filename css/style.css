@@ -181,3 +181,12 @@ footer{
 .contenido{
 	padding-top: 135px;
 }
+
+#hiperPie a{
+	text-decoration:none;
+	color: white;
+}
+
+#hiperPie a:hover{
+	font-weight: bold;
+}

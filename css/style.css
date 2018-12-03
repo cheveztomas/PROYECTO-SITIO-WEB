@@ -55,6 +55,7 @@ nav ul a:hover{
 .todo{
 	display: flex;
 	flex-direction: row;
+	justify-content: space-around;
 }
 
 section{

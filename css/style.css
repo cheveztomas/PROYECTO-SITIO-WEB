@@ -202,3 +202,10 @@ footer{
 	flex-direction: center;
 	justify-content: space-around;
 }
+
+.agruparRow{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}

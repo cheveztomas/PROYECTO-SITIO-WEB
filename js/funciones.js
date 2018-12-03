@@ -23,5 +23,5 @@ function abierto(){
 	}
 
 	//Se llama a la función cada segundo.
-	time=setTimeout("abierto()", 1000);
+	time=setTimeout("abierto()", 60000);
 }

@@ -48,7 +48,7 @@ nav ul a{
 nav ul a:hover{
 	background-color: #676666;
 	font-weight: bold;
-	border-radius: 50px;
+	border-radius: 5px;
 	color: white;
 }
 

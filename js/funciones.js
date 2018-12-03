@@ -18,10 +18,10 @@ function abierto(){
 		estadoHorario.value="Cerrado";
 	}
 	//Se verifica si el local se encuentra abierto y se le mustra el usuario un mensaje.
-	if (parseInt(hora>=7) && parseInt(hora)<=17) {
+	if (parseInt(hora)>=7 && parseInt(hora)<=17) {
 		estadoHorario.value="Abierto";
 	}
 
 	//Se llama a la función cada segundo.
-	time=setTimeout("abierto()", 60000);
+	time=setTimeout("abierto()", 1000);
 }

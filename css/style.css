@@ -142,7 +142,7 @@ footer{
 	padding: 15px;
 }
 
-#estadoHorario{
+#estadoHorario, .estH{
 	background-color: black;
 	color: #FF6C14;
 }

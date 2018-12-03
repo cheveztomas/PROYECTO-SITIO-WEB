@@ -209,3 +209,11 @@ footer{
 	flex-direction: row;
 	justify-content: space-around;
 }
+
+.cuadroI > div{
+	padding: 15px;
+	border: solid black 1px;
+	border-radius: 5px;
+	margin: 20px;
+	box-sizing: border-box;
+}

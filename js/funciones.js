@@ -13,12 +13,12 @@ function abierto(){
 		estadoHorario.value="Cerrado";
 	}
 	//Se verifica si se encuentra el local abierto por el horario.
-	if (parseInt(hora)<7 || parseInt(hora)>17) {
+	if (parseInt(hora)<7 || parseInt(hora)>=17) {
 		//Se muestra al usuario el mensaja.
 		estadoHorario.value="Cerrado";
 	}
 	//Se verifica si el local se encuentra abierto y se le mustra el usuario un mensaje.
-	if (parseInt(hora)>=7 && parseInt(hora)<=17) {
+	if (parseInt(hora)>=7 && parseInt(hora)<17) {
 		estadoHorario.value="Abierto";
 	}
 

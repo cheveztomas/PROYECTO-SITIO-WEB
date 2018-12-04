@@ -35,3 +35,12 @@ $(document).ready(function(){
         closeEffect: "none"
     });
 });
+
+function listaCatalogo(){
+	//Variables
+	var lista=new Array();
+
+	//Inicio
+	lista=document.getElementsByClassName("check");
+	console.log(lista);
+}

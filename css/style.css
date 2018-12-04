@@ -158,6 +158,17 @@ footer{
 	overflow: hidden;
 }
 
+.cuadro2{
+	margin-left: 12.5%;
+	width: 75%;
+	background-color: #B3B3B3;
+	border-radius: 5px;
+	padding: 2%;
+	color: black;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
 #carouselExampleIndicators{
 	width: 100%;
 }

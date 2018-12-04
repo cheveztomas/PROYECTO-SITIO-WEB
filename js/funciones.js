@@ -25,3 +25,13 @@ function abierto(){
 	//Se llama a la función cada segundo.
 	time=setTimeout("abierto()", 60000);
 }
+
+//Función para la galeria de modelos.
+$(document).ready(function(){
+    //FANCYBOX
+    //https://github.com/fancyapps/fancyBox
+    $(".fancybox").fancybox({
+        openEffect: "none",
+        closeEffect: "none"
+    });
+});

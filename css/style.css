@@ -288,3 +288,13 @@ footer{
 	font-weight: bold;
 	cursor: pointer;
 }
+
+.catalogo label:hover{
+	cursor: pointer;
+}
+
+.catalogo label img{
+	width: 200px;
+	height: 150px;
+	border-radius: 5px;
+}

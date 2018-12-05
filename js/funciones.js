@@ -34,13 +34,31 @@ function listaCatalogo(){
 	var Elemento="";
 
 	//Inicio
+	//Se recorre el arreglo con todos los elementos que tengan la clase ckeck.
 	for (var i = 0; i < lista.length; i++) {
+		//Se verifica si el estado del elmento se encuentra seleccionado.
 		if (lista[i].checked==true) {
+			//Se guarda el valor del elmento en una variable de tipo string
 			Elemento=lista[i].value.toString();
+			//Se agrega al arreglo los elementos que si estan seleccionados.
 			logitud=listaSele.push(Elemento);
 		}
 	}
+	//Se retorna el arreglo con los elemetos seleccionados.
+	return listaSele;
+}
+
+function listaSeleccion(){
+	//variables
+	listaSele=new Array();
+	//Inicio
+	//Se invoca a la función listaCatalogo la cual retorna los elementos seleccionados.
+	listaSele=listaCatalogo();
+
+	//Se limpia el div que contiene la lista.
 	document.getElementById('listaSeleccionada').innerHTML="";
+
+	//Se recorre el arreglo el cual tiene la lista de los articulos seleccionados y se muestran en pantalla.
 	for (var i = 0; i < listaSele.length; i++) {
 		console.log(listaSele[i]);
 		document.getElementById('listaSeleccionada').innerHTML+=listaSele[i]+"<br>";

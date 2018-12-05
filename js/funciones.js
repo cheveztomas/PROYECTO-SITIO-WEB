@@ -33,6 +33,7 @@ function listaCatalogo(){
 	var listaSele=new Array();
 	var longitud=0;
 	var Elemento="";
+	var ListaCookie=new Array();
 
 	//Inicio
 	//Se recorre el arreglo con todos los elementos que tengan la clase ckeck.
@@ -43,6 +44,8 @@ function listaCatalogo(){
 			Elemento=lista[i].value.toString();
 			//Se agrega al arreglo los elementos que si estan seleccionados.
 			logitud=listaSele.push(Elemento);
+			ListaCookie.push(lista[i].id);
+			console.log(ListaCookie);
 		}
 	}
 	//Se retorna el arreglo con los elemetos seleccionados.
@@ -96,4 +99,32 @@ function enviarListaWhatsApp(){
 		}
 	}
 	window.open(link,'_blank');
+}
+
+function CobertirArreglo(arreglo){
+	//variables
+	var 
+}
+
+function setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  var expires = "expires="+ d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
 }

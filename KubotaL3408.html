@@ -34,10 +34,34 @@
 		</ul>
 	</nav>
 
-	<div class="contenido">
-		<section>
-			
+	<div class="todo contenido">
+		<section class="seccion">
+			<div class="cuadro2">
+				<h2>Lista de articulos:</h2>
+				<div class="catalogo">
+					<label for="chk1001">
+						<img src="L3408/Aceite.jpg" alt="" class="imgCatalogo">
+						<input type="checkbox" name="" id="chk1001" class="check" onclick="listaSeleccion();" value="Aceite L3408">   Aceite L3408
+					</label>
+				</div>
+				<br>
+				<div class="catalogo">
+					<label for="chk1002">
+						<img src="L3408/Anticongelante.jpg" alt="" class="imgCatalogo">
+						<input type="checkbox" name="" id="chk1002" class="check" onclick="listaSeleccion();" value="Anticongelante L3408">  Anticongelante (Juego de dos)
+					</label>
+				</div>
+			</div>
 		</section>
+
+		<aside class="barra">
+			<h4>Articulos seleccionados:</h4>
+			<!-- Este div guarda la lista de elmentos seleccionados. -->
+			<div id="listaSeleccionada">
+			</div>
+			<br>
+			<input onclick="enviarListaWhatsApp();" type="button" id="listaWhatsApp" name="" class="boton" value="Enviar por WhatsApp">
+		</aside>
 	</div>
 
 	<footer>

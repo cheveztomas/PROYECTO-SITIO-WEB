@@ -298,3 +298,29 @@ footer{
 	height: 150px;
 	border-radius: 5px;
 }
+
+.boton{
+	width: 100%;
+	background-color: #2D6A80;
+	color: white;
+	display: none;
+	border-radius: 5px;
+	padding:15px;
+	font-size: 14px;
+	text-decoration: none;
+	box-sizing: border-box;
+}
+
+.boton:hover{
+	opacity: 0.9;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.botonVisible{
+	display: block;
+}
+
+#listaSeleccionada{
+	font-size: 16px;
+}

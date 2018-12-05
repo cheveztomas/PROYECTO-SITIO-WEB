@@ -26,6 +26,7 @@ function abierto(){
 	time=setTimeout("abierto()", 60000);
 }
 
+//Esta función retorna los elementos seleccionados.
 function listaCatalogo(){
 	//Variables
 	var lista=document.getElementsByClassName("check");
@@ -48,6 +49,7 @@ function listaCatalogo(){
 	return listaSele;
 }
 
+//Esta función muestra los valores seleccionados.
 function listaSeleccion(){
 	//variables
 	listaSele=new Array();
@@ -61,6 +63,23 @@ function listaSeleccion(){
 	//Se recorre el arreglo el cual tiene la lista de los articulos seleccionados y se muestran en pantalla.
 	for (var i = 0; i < listaSele.length; i++) {
 		console.log(listaSele[i]);
-		document.getElementById('listaSeleccionada').innerHTML+=listaSele[i]+"<br>";
+		document.getElementById('listaSeleccionada').innerHTML+=i+1+". "+listaSele[i]+"<br>";
 	}
+
+	//Se verifica si se encuentra algo en arreglo para mostrar o no el botón.
+	if (listaSele.length>0) {
+		document.getElementById('listaWhatsApp').classList.add('botonVisible');
+	}
+	else {
+		document.getElementById('listaWhatsApp').classList.remove('botonVisible');
+	}
+}
+
+function enviarListaWhatsApp(){
+	//Variables
+	//Se declara la variable con el valor inicial del mensaje que se quiere enviar.
+	var link="https://wa.me/50689677620?text=";
+	//Inicio
+	
+	window.open(link,'_blank');
 }

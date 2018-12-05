@@ -87,7 +87,7 @@ function enviarListaWhatsApp(){
 	//Se recorre el arreglo con los elementos seleccionados.
 	for (var i = 0; i < lista.length; i++) {
 		//Se verifica que no sea el ultimo elemento.
-		if (i!=lista.length) {
+		if (i!=lista.length-1) {
 			//Se va concatenado los elemetos de la lista.
 			link+=lista[i]+", %20";
 		}

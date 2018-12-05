@@ -26,21 +26,23 @@ function abierto(){
 	time=setTimeout("abierto()", 60000);
 }
 
-//Función para la galeria de modelos.
-$(document).ready(function(){
-    //FANCYBOX
-    //https://github.com/fancyapps/fancyBox
-    $(".fancybox").fancybox({
-        openEffect: "none",
-        closeEffect: "none"
-    });
-});
-
 function listaCatalogo(){
 	//Variables
 	var lista=document.getElementsByClassName("check");
+	var listaSele=new Array();
+	var longitud=0;
+	var Elemento="";
 
 	//Inicio
-	lista=
-	console.log(lista);
+	for (var i = 0; i < lista.length; i++) {
+		if (lista[i].checked==true) {
+			Elemento=lista[i].value.toString();
+			logitud=listaSele.push(Elemento);
+		}
+	}
+
+	for (var i = 0; i < listaSele.length; i++) {
+		console.log(listaSele[i]);
+		document.getElementById('listaSeleccionada').innerHTML+=listaSele[i]+"<br>";
+	}
 }

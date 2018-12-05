@@ -79,7 +79,14 @@ function enviarListaWhatsApp(){
 	//Variables
 	//Se declara la variable con el valor inicial del mensaje que se quiere enviar.
 	var link="https://wa.me/50689677620?text=";
+	var lista=new Array();
 	//Inicio
-	
+	//Se invoca a la función que tiene los elementos seleccionados y se guardan en una variable.
+	lista=listaCatalogo();
+
+	//Se recorre el arreglo con los elementos seleccionados.
+	for (var i = 0; i < lista.length; i++) {
+		
+	}
 	window.open(link,'_blank');
 }

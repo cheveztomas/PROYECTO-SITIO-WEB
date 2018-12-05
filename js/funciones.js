@@ -38,9 +38,9 @@ $(document).ready(function(){
 
 function listaCatalogo(){
 	//Variables
-	var lista=new Array();
+	var lista=document.getElementsByClassName("check");
 
 	//Inicio
-	lista=document.getElementsByClassName("check");
+	lista=
 	console.log(lista);
 }

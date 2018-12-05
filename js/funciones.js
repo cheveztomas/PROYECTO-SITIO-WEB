@@ -40,7 +40,7 @@ function listaCatalogo(){
 			logitud=listaSele.push(Elemento);
 		}
 	}
-
+	document.getElementById('listaSeleccionada').innerHTML="";
 	for (var i = 0; i < listaSele.length; i++) {
 		console.log(listaSele[i]);
 		document.getElementById('listaSeleccionada').innerHTML+=listaSele[i]+"<br>";

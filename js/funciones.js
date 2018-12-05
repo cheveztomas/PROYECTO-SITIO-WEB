@@ -97,3 +97,22 @@ function enviarListaWhatsApp(){
 	}
 	window.open(link,'_blank');
 }
+
+function GenerarPDF(){
+	//Varaibles
+	var doc= new jsPDF();
+	var arregloLista=new Array();
+
+	//Inicio
+	doc.setFontSize(22);
+	doc.text(20, 20, 'Kit-Bota Lista de Pedidos');
+
+	arregloLista=listaCatalogo();
+
+	for (var i = 0; i < arregloLista.length; i++) {
+		doc.setFontSize(16);
+		doc.text(20, 30, arregloLista[i]);
+	}
+
+	doc.save('Test.pdf');
+}

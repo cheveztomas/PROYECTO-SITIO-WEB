@@ -86,7 +86,7 @@ function enviarListaWhatsApp(){
 
 	//Se recorre el arreglo con los elementos seleccionados.
 	for (var i = 0; i < lista.length; i++) {
-		
+		link+=lista[i]+", %20";
 	}
 	window.open(link,'_blank');
 }

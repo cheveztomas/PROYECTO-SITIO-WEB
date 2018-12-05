@@ -86,7 +86,13 @@ function enviarListaWhatsApp(){
 
 	//Se recorre el arreglo con los elementos seleccionados.
 	for (var i = 0; i < lista.length; i++) {
-		link+=lista[i]+", %20";
+		//Se verifica que no sea el ultimo elemento.
+		if (i!=lista.length) {
+			link+=lista[i]+", %20";
+		}
+		else{
+			link+=lista[i];
+		}
 	}
 	window.open(link,'_blank');
 }

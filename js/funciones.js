@@ -100,20 +100,26 @@ function enviarListaWhatsApp(){
 
 function GenerarPDF(){
 	//Varaibles
+	//Se instancia un documento.
 	var doc= new jsPDF();
 	var arregloLista=new Array();
 	var acumulador=30;
 
 	//Inicio
+	//Se establece un titulo al documento.
 	doc.setFontSize(22);
 	doc.text(20, 20, 'Kit-Bota Lista de Pedidos');
 
+	//Se inboca a la función que retorna losa elementos seleccionados.
 	arregloLista=listaCatalogo();
 
+	//Se recorrele el arreglo de los elementos seleccionados.
 	for (var i = 0; i < arregloLista.length; i++) {
-		doc.setFontSize(16);
+		//Se establece un tamaño de fuente.
+		doc.setFontSize(14);
+		//Se establece lo que va contentener cada linea el primer parametro representa x el segundo y;
 		doc.text(20,acumulador,"-"+arregloLista[i]);
-		acumulador+=5;
+		acumulador+=4;
 	}
 
 	doc.save('Lista de Pedidos Kit-Bota.pdf');

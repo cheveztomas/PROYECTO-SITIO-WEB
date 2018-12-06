@@ -62,7 +62,7 @@ function listaSeleccion(){
 	for (var i = 0; i < listaSele.length; i++) {
 		console.log(listaSele[i]);
 		/*document.getElementById('listaSeleccionada').innerHTML+="<i class='fas fa-tractor'></i>"+". "+listaSele[i]+"<br>";*/
-		document.getElementById('listaSeleccionada').innerHTML+='<label for="item'+i+'"> <i class="fas fa-tractor"></i>. '+listaSele[i]+' <input type="number" name="" id="item'+i+'" value="1" class="listaItem" placeholder=""></label><br>';
+		document.getElementById('listaSeleccionada').innerHTML+='<label for="item'+i+'"> <i class="fas fa-tractor"></i>. '+listaSele[i]+' <input type="number" name="" min="1" onKeyPress="validar(this)" pattern="^[0-9]+" id="item'+i+'" value="1" class="listaItem" placeholder=""></label><br>';
 	}
 
 	//Se verifica si se encuentra algo en arreglo para mostrar o no el botón.
@@ -81,19 +81,21 @@ function enviarListaWhatsApp(){
 	//Se declara la variable con el valor inicial del mensaje que se quiere enviar.
 	var link="https://wa.me/50689677620?text=";
 	var lista=new Array();
+	var cantidad=new Array();
 	//Inicio
 	//Se invoca a la función que tiene los elementos seleccionados y se guardan en una variable.
 	lista=listaCatalogo();
+	cantidad=cantidadesLista();
 
 	//Se recorre el arreglo con los elementos seleccionados.
 	for (var i = 0; i < lista.length; i++) {
 		//Se verifica que no sea el ultimo elemento.
 		if (i!=lista.length-1) {
 			//Se va concatenado los elemetos de la lista.
-			link+=lista[i]+", %20";
+			link+=lista[i]+" "+cantidad[i]+", %20";
 		}
 		else{
-			link+=lista[i];
+			link+=lista[i]+" "+cantidad[i];
 		}
 	}
 	window.open(link,'_blank');
@@ -105,8 +107,11 @@ function GenerarPDF(){
 	var doc= new jsPDF();
 	var arregloLista=new Array();
 	var acumulador=30;
+	var cantidad=new Array();
 
 	//Inicio
+	cantidad=cantidadesLista();
+
 	//Se establece un titulo al documento.
 	doc.setFontSize(22);
 	doc.text(20, 20, 'Kit-Bota Lista de Pedidos');
@@ -117,12 +122,37 @@ function GenerarPDF(){
 	//Se recorrele el arreglo de los elementos seleccionados.
 	for (var i = 0; i < arregloLista.length; i++) {
 		//Se establece un tamaño de fuente.
-		doc.setFontSize(14);
+		doc.setFontSize(13);
 		//Se establece lo que va contentener cada linea el primer parametro representa x el segundo y;
-		doc.text(20,acumulador,"-"+arregloLista[i]);
-		acumulador+=4;
+		doc.text(20,acumulador,"-"+arregloLista[i]+" - ("+cantidad[i]+')');
+		acumulador+=5;
 	}
 
 	//Se guarda el documento.
 	doc.save('Lista de Pedidos Kit-Bota.pdf');
 }
+
+function cantidadesLista(){
+	//Variables
+	var arreglo=new Array();
+	var arregloValores=new Array();
+
+	//Inicio
+	//Se guarda los valores de esa clase en un arreglo
+	arreglo=document.getElementsByClassName("listaItem");
+	//Se recorre el arreglo
+	for (var i = 0; i < arreglo.length; i++) {
+		//Se guardan los valres en arreglo.
+		arregloValores[i]=arreglo[i].value;
+	}
+	//Se retorna el arreglo
+	return arregloValores;
+}
+
+function validar(valor) {
+   if (valor.value<=0) {
+   	document.getElementById(valor.id).value="";
+   	document.getElementById(valor.id).value=1;
+   	alert("Una cantidad agregada es incorrecta.");
+   }
+} 

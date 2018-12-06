@@ -324,3 +324,11 @@ footer{
 #listaSeleccionada{
 	font-size: 16px;
 }
+
+.listaItem{
+	background-color: #DCF8FF;
+	margin: 1px;
+	padding: 2px;
+	width: 40px;
+	border-radius: 5px;
+}

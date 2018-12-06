@@ -61,7 +61,8 @@ function listaSeleccion(){
 	//Se recorre el arreglo el cual tiene la lista de los articulos seleccionados y se muestran en pantalla.
 	for (var i = 0; i < listaSele.length; i++) {
 		console.log(listaSele[i]);
-		document.getElementById('listaSeleccionada').innerHTML+="<i class='fas fa-tractor'></i>"+". "+listaSele[i]+"<br>";
+		/*document.getElementById('listaSeleccionada').innerHTML+="<i class='fas fa-tractor'></i>"+". "+listaSele[i]+"<br>";*/
+		document.getElementById('listaSeleccionada').innerHTML+='<label for="item'+i+'"> <i class="fas fa-tractor"></i>. '+listaSele[i]+' <input type="number" name="" id="item'+i+'" value="1" class="listaItem" placeholder=""></label><br>';
 	}
 
 	//Se verifica si se encuentra algo en arreglo para mostrar o no el botón.

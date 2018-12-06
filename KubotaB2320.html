@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Kit-Bota | Kubota - B2320</title>
+	<script src="dist/jspdf.min.js"></script>
 	<script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8" async defer></script>
 	<script src="js/bootstrap.js" type="text/javascript" charset="utf-8" async defer></script>
 	<script src="js/funciones.js" type="text/javascript" charset="utf-8" async defer></script>
@@ -60,6 +61,8 @@
 			</div>
 			<br>
 			<input onclick="enviarListaWhatsApp();" type="button" id="listaWhatsApp" name="" class="boton" value="Enviar por WhatsApp">
+			<br>
+			<input onclick="GenerarPDF();" type="button" id="listaPDF" name="" class="boton" value="Descargar lista en PDF">
 		</aside>
 	</div>
 

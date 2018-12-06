@@ -62,7 +62,7 @@ function listaSeleccion(){
 	for (var i = 0; i < listaSele.length; i++) {
 		console.log(listaSele[i]);
 		/*document.getElementById('listaSeleccionada').innerHTML+="<i class='fas fa-tractor'></i>"+". "+listaSele[i]+"<br>";*/
-		document.getElementById('listaSeleccionada').innerHTML+='<label for="item'+i+'"> <i class="fas fa-tractor"></i>. '+listaSele[i]+' <input type="number" name="" min="1" onKeyPress="validar(this)" pattern="^[0-9]+" id="item'+i+'" value="1" class="listaItem" placeholder=""></label><br>';
+		document.getElementById('listaSeleccionada').innerHTML+='<label for="item'+i+'"> <i class="fas fa-tractor"></i>. '+listaSele[i]+' <input type="number" name="" min="1" pattern="^[0-9]+" id="item'+i+'" value="1" class="listaItem" placeholder=""></label><br>';
 	}
 
 	//Se verifica si se encuentra algo en arreglo para mostrar o no el botón.
@@ -148,11 +148,3 @@ function cantidadesLista(){
 	//Se retorna el arreglo
 	return arregloValores;
 }
-
-function validar(valor) {
-   if (valor.value<=0) {
-   	document.getElementById(valor.id).value="";
-   	document.getElementById(valor.id).value=1;
-   	alert("Una cantidad agregada es incorrecta.");
-   }
-} 

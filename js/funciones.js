@@ -42,8 +42,6 @@ function listaCatalogo(){
 			Elemento=lista[i].value.toString();
 			//Se agrega al arreglo los elementos que si estan seleccionados.
 			logitud=listaSele.push(Elemento);
-			ListaCookie.push(lista[i].id);
-			console.log(ListaCookie);
 		}
 	}
 	return listaSele;
@@ -69,9 +67,11 @@ function listaSeleccion(){
 	//Se verifica si se encuentra algo en arreglo para mostrar o no el botón.
 	if (listaSele.length>0) {
 		document.getElementById('listaWhatsApp').classList.add('botonVisible');
+		document.getElementById('listaPDF').classList.add('botonVisible');
 	}
 	else {
 		document.getElementById('listaWhatsApp').classList.remove('botonVisible');
+		document.getElementById('listaPDF').classList.remove('botonVisible');
 	}
 }
 
@@ -102,6 +102,7 @@ function GenerarPDF(){
 	//Varaibles
 	var doc= new jsPDF();
 	var arregloLista=new Array();
+	var acumulador=30;
 
 	//Inicio
 	doc.setFontSize(22);
@@ -111,8 +112,9 @@ function GenerarPDF(){
 
 	for (var i = 0; i < arregloLista.length; i++) {
 		doc.setFontSize(16);
-		doc.text(20, 30, arregloLista[i]);
+		doc.text(20,acumulador,"-"+arregloLista[i]);
+		acumulador+=5;
 	}
 
-	doc.save('Test.pdf');
+	doc.save('Lista de Pedidos Kit-Bota.pdf');
 }

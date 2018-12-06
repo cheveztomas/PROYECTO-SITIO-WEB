@@ -122,5 +122,6 @@ function GenerarPDF(){
 		acumulador+=4;
 	}
 
+	//Se guarda el documento.
 	doc.save('Lista de Pedidos Kit-Bota.pdf');
 }

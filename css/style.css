@@ -224,28 +224,34 @@ footer{
 	width: 100%;
 }
 
+/*Es un div el cual se utiliza para mostrar información*/
 #infor{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 }
 
+/*Se establese un estilo para los derechos de autor que se enceuntran el pie.*/
 #copyr{
 	text-align: center;
 }
 
+/*Se establece esta clase para poder centrar cualquier texto*/
 .centrar{
 	text-align:center;
 }
 
+/*Se utiliza para cambiar el tamaño de la fuente de los medios de pagos aceptados de forma proporcional al tamaño de la pagina*/
 #formasP{
 	font-size: 500%;
 }
 
+/*Se establese un estilo el cual separa de la parte superiro el contenido se utiliza ya que el encabezado y el nav están fijos.*/
 .contenido{
 	padding-top: 135px;
 }
 
+/*Se utiliza para darle dormato a los hipervinculos del pie de pagina.*/
 #hiperPie a{
 	text-decoration:none;
 	color: gray;
@@ -256,10 +262,12 @@ footer{
 	color: white
 }
 
+/*Se utiliza para dar una sombra negra a algún texto*/
 .sombra{
 	 text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
 }
 
+/*Se utiliza para centrar un video y que no se vea descolocado*/
 .video{
 	width: 100%;
 	display: flex;
@@ -267,6 +275,7 @@ footer{
 	justify-content: space-around;
 }
 
+/*Se utiliza para agrupar elmentos en forma de fila si es necesario.*/
 .agruparRow{
 	width: 100%;
 	display: flex;
@@ -274,6 +283,7 @@ footer{
 	justify-content: space-around;
 }
 
+/*Se utiliza para acumodar los hijos directos de esta clase*/
 .cuadroI > div{
 	margin-top: 15px;
 	padding: 15px;
@@ -282,12 +292,7 @@ footer{
 	overflow: hidden;
 }
 
-.gallery
-{
-    display: inline-block;
-    margin-top: 20px;
-}
-
+/*Se utiliza para alinear el contenido en el centro y que tenga un efecto sobre los hipervinculos*/
 .alinear{
 	display: flex;
 	flex-direction: row;
@@ -305,6 +310,7 @@ footer{
 	opacity: 0.9;
 }
 
+/*Se utiliza para darle formato a los elementos de un catalgo de productos*/
 .catalogo{
 	width: 100%;
 	background-color: #FFFFFF;
@@ -331,6 +337,7 @@ footer{
 	border-radius: 5px;
 }
 
+/*Se le da formato a los botones.*/
 .boton{
 	width: 100%;
 	background-color: #2D6A80;
@@ -353,10 +360,12 @@ footer{
 	display: block;
 }
 
+/*SE le aplica un tamaño a los elemetos que tengan esta clase.*/
 #listaSeleccionada{
 	font-size: 16px;
 }
 
+/**/
 .listaItem{
 	background-color: #DCF8FF;
 	margin: 1px;

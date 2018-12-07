@@ -121,7 +121,9 @@ nav ul a:hover{
 
 /*Se establece la configuración para el tag de seccion*/
 section{
-	margin: 10px;
+	padding:15px;
+	width: 70%;
+	margin-left: 15%;
 	background-color: #FF6C14;
 	border-radius: 5px;
 	box-sizing: border-box;
@@ -193,7 +195,7 @@ footer{
 
 /*Cuadro uno representa un estilo que se le da a un cuadro que se encuentra dentro de la seccion.*/
 .cuadroI{
-	margin: 12.5%;
+	margin-left: 12.5%;
 	width: 75%;
 	background-color: #B3B3B3;
 	border-radius: 5px;

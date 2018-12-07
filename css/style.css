@@ -365,7 +365,7 @@ footer{
 	font-size: 16px;
 }
 
-/**/
+/*Se ke aplica un formato a los cuadros input de la lista seleccionada*/
 .listaItem{
 	background-color: #DCF8FF;
 	margin: 1px;
@@ -374,6 +374,7 @@ footer{
 	border-radius: 5px;
 }
 
+/*E un estilo para textos que sean instrucciones*/
 .instruccion{
 	color: #D8F6FC;
 	font-size: 13px;

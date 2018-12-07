@@ -5,10 +5,13 @@
 	border: 0;
 	margin:0;
 }
+
+/*Se establece un color de fondo para todo el cuerpo del documento*/
 body{
 	background-color: #B3B3B3;
 }
 
+/*Se establece los valores para el encabezado,*/
 header{
 	background-color: black;
 	display: block;
@@ -22,6 +25,7 @@ header{
 	opacity: 0.9;
 }
 
+/*Se establece el estilo para el nav que este caso es una barra de navegación*/
 nav{
 	display: flex;
 	justify-content: center;
@@ -70,6 +74,7 @@ nav ul a:hover{
 	color: white;
 }
 
+/*Se establece los valores para el submenu de la barra de navegación*/
 .submenu{
 	top: 52px;
 	display: none;
@@ -107,12 +112,14 @@ nav ul a:hover{
 	z-index: 1;
 }
 
+/*Es una clase la cual organiza los elementos contenidos en forma de fila.*/
 .todo{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 }
 
+/*Se establece la configuración para el tag de seccion*/
 section{
 	margin: 10px;
 	background-color: #FF6C14;
@@ -131,6 +138,7 @@ section{
 	box-sizing: border-box;
 }
 
+/*Representa la barra lateral que guarda la lista de productos seleccionado.*/
 .barra{
 	margin: 10px;
 	width: 27%;
@@ -144,6 +152,7 @@ section{
 	overflow: scroll;
 }
 
+/*Representa a la barra que se encuentra en el index*/
 .barra1{
 	margin: 10px;
 	width: 27%;
@@ -166,6 +175,7 @@ section{
 	font-weight: bold;
 }
 
+/*Representa eltilo del tag del pie.*/
 footer{
 	margin-top: 10px;
 	background-color: black;
@@ -175,11 +185,13 @@ footer{
 	padding: 15px;
 }
 
+/*Representa un estilo para el control de horario el cual indica si el local se encuentra cerrado*/
 #estadoHorario, .estH{
 	background-color: black;
 	color: #FF6C14;
 }
 
+/*Cuadro uno representa un estilo que se le da a un cuadro que se encuentra dentro de la seccion.*/
 .cuadroI{
 	margin-left: 12.5%;
 	width: 75%;
@@ -191,6 +203,7 @@ footer{
 	overflow: hidden;
 }
 
+/*Es exactamente igual que el aterior con diferencia de que tiene un tamaño fijo y y es desborde es de scroll*/
 .cuadro2{
 	margin-left: 12.5%;
 	width: 75%;

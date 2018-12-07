@@ -193,7 +193,7 @@ footer{
 
 /*Cuadro uno representa un estilo que se le da a un cuadro que se encuentra dentro de la seccion.*/
 .cuadroI{
-	margin-left: 12.5%;
+	margin: 12.5%;
 	width: 75%;
 	background-color: #B3B3B3;
 	border-radius: 5px;

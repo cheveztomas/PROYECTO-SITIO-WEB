@@ -164,6 +164,7 @@ section{
 	padding: 2%;
 	box-sizing: border-box;
 	font-size: 25px;
+	overflow: hidden;
 }
 
 .barra1 a{
@@ -378,4 +379,9 @@ footer{
 .instruccion{
 	color: #D8F6FC;
 	font-size: 13px;
+}
+
+.gallery{
+	display: inline-block;
+	margin-top: 20px;
 }

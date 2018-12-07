@@ -1,3 +1,4 @@
+/*Se establece valores para el documento en general sin padding, bordes y margenes.*/
 *{
 	font-family: Tahoma, Arial;
 	padding: 0;
